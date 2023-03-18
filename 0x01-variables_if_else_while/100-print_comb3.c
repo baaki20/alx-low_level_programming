@@ -2,29 +2,29 @@
 
 /**
  * main - prints all possible different combinations of two digits
- * Return: Always 0 (Success)
+ * Return: ALways 0 (Success)
  */
 int main(void)
 {
-    char digit1, digit2;
+	int n, m;
 
-    for (digit1 = '0'; digit1 <= '8'; digit1++)
-    {
-        for (digit2 = '1'; digit2 <= '9'; digit2++)
-        {
-            if (digit2 > digit1)
-            {
-                putchar(digit1);
-                putchar(digit2);
-                if (digit1 != '8' || digit2 != '9')
-                {
-                    putchar(',');
-                    putchar(' ');
-                }
-            }
-        }
-    }
-    putchar('\n');
-    return (0);
+	for (n = 48; n <= 56; n++)
+	{
+		for (m = 49; m <= 57; m++)
+		{
+			if (m > n)
+			{
+				putchar(n);
+				putchar(m);
+				if (n != 56 || m != 57)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
 
