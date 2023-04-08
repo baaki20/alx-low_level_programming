@@ -9,7 +9,7 @@
  * Return: the int converted from the string
  */
 
-int _atoi(int argc, char* argv[])
+int (int argc, char* argv[])
 {
 	if (argc > 2)
 	{
