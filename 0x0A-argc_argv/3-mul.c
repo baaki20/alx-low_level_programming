@@ -9,7 +9,7 @@
  * Return: the int converted from the string
  */
 
-int (int argc, char* argv[])
+int main(int argc, char* argv[])
 {
 	if (argc > 2)
 	{
