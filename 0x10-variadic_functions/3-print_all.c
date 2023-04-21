@@ -16,8 +16,6 @@ void print_all(const char * const format, ...)
 	va_list ap;
 	const char *p = format;
 	char *s;
-	int i;
-	float f;
 
 	va_start(ap, format);
 
