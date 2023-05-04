@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+
+/**
+ * main - enter a password and compares it to a default password
+ * stored in a file.
+ *
+ * Return: 0 on success, 1 on failure.
+ */
+int main(void)
+{
+	char password[100];
+	char stored_password[100];
+	FILE *fp;
+
+	fp = fopen("101-password", "r");
+	if (fp == NULL)
+	{
+		printf("Error opening file\n");
+		return (1);
+	}
+	fscanf(fp, "%s", stored_password);
+	fclose(fp);
+
+	printf("Enter the password: ");
+	scanf("%s", password);
+
+	if (strcmp(password, stored_password) == 0)
+	{
+		printf("Congratulations! You have successfully cracked the program.\n");
+		return (0);
+	}
+	else
+	{
+		printf("Sorry, that password is incorrect. Please try again.\n");
+		return (1);
+	}
+}
+
